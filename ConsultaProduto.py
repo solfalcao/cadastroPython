@@ -8,7 +8,7 @@ while True:
     if codprod == "000":
         break
     
-    cursor.execute ("Select * from produto where codprod = " + codprod)
+    cursor.execute ("Select * from produto where codprod = ?", (codprod,))
 
     consult = cursor.fetchone()
 
